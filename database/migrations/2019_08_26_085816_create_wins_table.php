@@ -20,9 +20,6 @@ class CreateWinsTable extends Migration
             $table->integer('col_3');
             $table->integer('col_4');
             $table->integer('col_5');
-            $table->integer('col_6');
-            $table->integer('col_7');
-            $table->integer('col_8');
             $table->timestamps();
         });
     }
