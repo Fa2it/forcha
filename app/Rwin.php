@@ -20,7 +20,7 @@ class Rwin
     }
 
     public static function buildFiveNumbers( array $param ){
-
+        
         while ( count( $param ) < 5 ) {
           $randNum = rand(1,16);
           if( ! in_array( $randNum, $param ) )

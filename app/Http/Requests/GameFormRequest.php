@@ -28,24 +28,29 @@ class GameFormRequest extends FormRequest
         ];
     }
 
+    public function getQueryParams(){
+      $r = [];
+      for( $ii=1; $ii<6; $ii++){
+            $tmp = (int) $this->input('sel_'.$ii );
+            if( $tmp > 0 )
+                $r['col_'.$ii] = $tmp;
 
-    public function prepareData(string $qp ){
-        $r = [];
-        for( $ii=1; $ii<6; $ii++){
-              $tmp = (int) $this->input('sel_'.$ii );
-              if( $tmp > 0 )
-                  $r['col_'.$ii] = $tmp;
 
-
-        }
-        if( count( $r ) ){
-            $this->session()->put( $qp, $r);
-        }
-        return $this;
+      }
+      if( count( $r ) ){
+          $this->session()->put( 'queryParams', $r);
+      }
+      return $this->session()->get('queryParams',[] );
     }
 
-    public function getQueryParams(string $qp ='queryParams' ){
-      return $this->prepareData( $qp )->session()->get($qp,[] );
+    public function getgameQueryParams(){
+      $r = [];
+      for( $ii=1; $ii<6; $ii++){
+            $tmp = (int) $this->input('sel_'.$ii );
+            if( $tmp > 0 )
+                $r['col_'.$ii] = $tmp;
+      }
+      return $r;
     }
 
 

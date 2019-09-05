@@ -109,7 +109,7 @@
         </div>
         <div class="row justify-content-center">
           <input type="hidden" name="_token" :value="csrf">
-          <button class="btn btn-primary mt-2" type="submit" v-bind:disabled="isDisabled">Submit</button>
+          <button class="btn btn-primary mt-2" type="submit">Submit</button>
         </div>
       </form>
 </template>
@@ -121,7 +121,6 @@
        data: function() {
           return {
             selectedOption:[],
-            isDisabled:true,
             csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
           }
         },
@@ -135,19 +134,14 @@
                     event.target.classList.remove("alert-danger");
                     this.selectedOption.push( event.target.value )
                }
-               this.checkDisabled( this.selectedOption.length )
           },
           arrayContains(arr,el){
               for(let i=0; i<arr.length; i++ ){
-                  if( arr[i] == el )
+                  if( parseInt( arr[i] ) == parseInt( el ) )
                     return true;
               }
               return false;
           },
-          checkDisabled: function( inp ){
-                this.isDisabled =  !( inp > 0 );
-                return this.isDisabled;
-          }
 
        },
        beforeMount(){
