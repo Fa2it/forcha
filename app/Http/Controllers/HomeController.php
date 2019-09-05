@@ -37,7 +37,7 @@ class HomeController extends Controller
      */
     public function gametwo(GameFormRequest $gfr)
     {
-        $q = $gfr->getQueryParams();
+        $q = $gfr->getQueryParams('gameQueryParams');
 
         return view('gametwo',['wins'=> Rwin::queryResults( $q ) ]);
     }
