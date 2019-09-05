@@ -19,3 +19,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home', 'HomeController@index')->name('home');
+Route::get('/gametwo', 'HomeController@gametwo')->name('gametwo');
+Route::post('/gametwo', 'HomeController@gametwo')->name('gametwo');

@@ -30,6 +30,19 @@ class HomeController extends Controller
         return view('home',['wins'=>$this->queryResults( $q ) ]);
     }
 
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function gametwo(Request $request)
+    {
+         $this->prepareData( $request);
+        $q = $request->session()->get('queryParams',[] );
+        //dd( $q );
+        return view('gametwo',['wins'=>$this->queryResults( $q ) ]);
+    }
+
 
     public function prepareData( Request $request){
         $r = [];

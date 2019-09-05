@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-9">
             <div class="card">
-              <a href="/gametwo" class="m-1 btn btn-primary">Game Two</a>
+              <a href="/home" class="m-1 btn btn-primary">Main Game</a>
                 <div class="card-header bg-info">Select Minimum of 3 Numbers</div>
 
                 <div class="card-body">
@@ -30,15 +30,11 @@
                             <td>{{ $win->col_4 }}</td>
                             <td>{{ $win->col_5 }}</td>
                           </tr>
-
                           @endforeach
 
                         </tbody>
                       </table>
 
-                    </div>
-                    <div class="card-footer mt-2">
-                      {{ $wins->links() }}
                     </div>
                 </div>
             </div>
