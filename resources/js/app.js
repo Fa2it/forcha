@@ -21,6 +21,7 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
+Vue.component('searchformgame-component', require('./components/SearchFormGameComponent.vue').default);
 Vue.component('searchform-component', require('./components/SearchFormComponent.vue').default);
 
 /**

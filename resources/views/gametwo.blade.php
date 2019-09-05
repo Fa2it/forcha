@@ -6,10 +6,10 @@
         <div class="col-md-9">
             <div class="card">
               <a href="/home" class="m-1 btn btn-primary">Main Game</a>
-                <div class="card-header bg-info">Select Minimum of 3 Numbers</div>
+                <div class="card-header bg-info">Select Minimum of 1 Numbers</div>
 
                 <div class="card-body">
-                    <searchform-component></searchform-component>
+                    <searchformgame-component></searchformgame-component>
                     <div class="result mt-3">
                       <table class="table table-sm  table-bordered  table-hover">
                         <thead>
@@ -22,13 +22,13 @@
                           </tr>
                         </thead>
                         <tbody>
-                          @foreach ($wins as $win)
+                          @foreach ($wins->generator() as $win)
                           <tr>
-                            <td>{{ $win->col_1 }}</td>
-                            <td>{{ $win->col_2 }}</td>
-                            <td>{{ $win->col_3 }}</td>
-                            <td>{{ $win->col_4 }}</td>
-                            <td>{{ $win->col_5 }}</td>
+                            <td>{{ $win[0] }}</td>
+                            <td>{{ $win[1] }}</td>
+                            <td>{{ $win[2] }}</td>
+                            <td>{{ $win[3] }}</td>
+                            <td>{{ $win[4] }}</td>
                           </tr>
                           @endforeach
 
