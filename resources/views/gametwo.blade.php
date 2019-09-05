@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-9">
             <div class="card">
-              <a href="/home" class="m-1 btn btn-primary">Main Game</a>
-                <div class="card-header bg-info">Select Minimum of 1 Numbers</div>
+              <a href="/home" class="m-1 btn btn-success">Main Game</a>
+                <div class="card-header bg-primary">Select Minimum of 1 Numbers <strong>You are at Game Two</strong></div>
 
                 <div class="card-body">
                     <searchformgame-component></searchformgame-component>
